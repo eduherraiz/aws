@@ -16,6 +16,9 @@ from ..aws.bucket import Bucket
 
 @return_future
 def load(context, url, callback):
+    load_sync(context, url, callback)
+
+def load_sync(context, url, callback):
     """
     Loads image
     :param Context context: Thumbor's context
